@@ -56,7 +56,7 @@ async function main() {
     for(let todo in flattenedArray[users]){
       for(let ids in flattenedArray[users][todo]){
         const getId = flattenedArray[users][todo][ids].id.split('-')
-        const id = getId[2]
+        const id = getId[1]
         const numTodosCompletedB = flattenedArray[users][todo][ids].isCompleted
         if(!answer[id]){
           answer[id] = {
